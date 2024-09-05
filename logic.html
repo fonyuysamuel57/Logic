@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Tutor</title>
+</head>
+
+<body>
+    <input type="text" id="integer">
+    <button onclick="checkInteger()">Check</button>
+    <p id="response"></p>
+    <script>
+        let integer = document.getElementById("integer");
+        let response = document.getElementById("response");
+
+        function checkInteger() {
+            let message = "";
+            console.log(integer.value % 2)
+            if (integer.value % 2 != 0) {
+                message = "Weird";
+            }
+            if (integer.value % 2 == 0) {
+                if (integer.value > 1 && integer.value < 6) {
+                    message = "Not weird";
+                }
+                if (integer.value > 5 && integer.value < 21) {
+                    message = "Wweird";
+                }
+                if (integer.value > 20) {
+                    message = "Nnot Weird";
+                }
+            }
+            response.innerHTML = message;
+        }
+    </script>
+</body>
+
+</html>
