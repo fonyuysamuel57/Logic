@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>incrimentation</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">PRINTING OUT A MULTIPLICATION TABLE FOR ANY GIVEN NUMEBR USING INCREAMENTATION</h1>
+
+    <div id="table">
+        <label>Input number: </label>
+        <input type="text" id="integer">
+        <button onclick="printIntegers()">Ok</button>
+        <br>
+        <p id="result"></p>
+        <script>
+            //setiing variable container for collecting variables
+            // var number = parseInt(promot('Enter a Number:'));
+            // incrimenting from 1 to 10
+
+            function printIntegers() {
+                let number = document.getElementById('integer').value;
+                for (i = 1; i <= 10; i++) {
+
+                    document.getElementById('result').innerHTML += `${i} * ${number} = ${i * number}<br>`;
+
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
